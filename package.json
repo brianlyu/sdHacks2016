@@ -2,7 +2,7 @@
   "name": "cool-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/brianlyu/sdHacks2016/issues"
   },
-  "homepage": "https://github.com/brianlyu/sdHacks2016#readme"
+  "homepage": "https://github.com/brianlyu/sdHacks2016#readme",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "node-soundcloud": "0.0.5"
+  }
 }
