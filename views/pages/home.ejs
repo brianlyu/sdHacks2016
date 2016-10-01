@@ -1,7 +1,21 @@
-<% include ../partials/header %>
-  <div class="container">
-    <h1 class="title"> Music App </h1>
-    <button class="hollow button create-button secondary" href="#">Create</button>
-    <input type="text" id="front-code" placeholder="Enter Code Here..">
-  </div>
+<% include ../partials/firstHeader %>
+
+  <title>Sound Juke</title>
+<% include ../partials/lastHeader %>
+  <form action="/createListButton" method="POST" class="container">
+    <h1 class="text"> Sound Juke  </h1>
+    <div>
+      <input type="text" id="front-code" name="findPlayList" placeholder="Enter Code or Playlist Here...">
+    </div>
+    <button class="hollow button create-button secondary">Search</button>
+    <button class="hollow button create-button secondary">Create</button>
+  </form>
+  <script type="text/javascript">
+    var input = document.querySelector('#front-code').addEventListener("onKeyPress", ()=>{
+      this.value("");
+    });
+    console.log(document.querySelector('#front-code'));
+
+
+  </script>
 <% include ../partials/footer %>
