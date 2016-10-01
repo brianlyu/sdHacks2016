@@ -14,6 +14,23 @@ body {
   color: #D8E2E6;
 }
 
+/* front button css */
 .create-button {
   position: relative;
+  color: #D8E2E6;
 }
+
+.button.hollow.secondary:hover, .button.hollow.secondary:focus{
+    border-color: #D8E2E6;
+    color: #D8E2E6;
+}
+/* ---------------- */
+
+/* front input text */
+#front-code {
+  text-align: center;
+  margin: 0 auto;
+  width: 30%;
+
+}
+/* --------------- */
