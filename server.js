@@ -22,6 +22,8 @@ ref.once("value", function(snapshot) {
 });
 */
 
+var queue = [];
+
 var createPlayList = "";
 
 /* global variable for passing data through routes */
@@ -45,7 +47,7 @@ app.post('/createListButton', (req,res) => {
   console.log(req.body);
   if(req.body.search && req.body.roomKey !== ''){
     res.redirect('/confirmation');
-  } else if(req.body.create && req.body.roomKey !== ''){
+  } else if(req.body.enter && req.body.roomKey === '0000'){
     createPlayList = req.body.roomKey; // this is the value of the door code
     res.redirect('/playList');
   } else {
@@ -61,6 +63,12 @@ app.get('/confirmation', (req,res)=> {
 app.get('/playList', (req,res)=> {
   res.render("pages/playList", {search: search});
 });
+
+/*
+pushSong(songMetadata) {
+    
+}
+*/
 
 
 var server = app.listen(3000, ()=>{
