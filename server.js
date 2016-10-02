@@ -9,10 +9,18 @@ app.use(bodyParser.json());
 
 var firebase = require('firebase');
 
+/*
 firebase.initializeApp({
   serviceAccount: "Unisound-6498de9ad53e.json",
   databaseURL: "https://unisound-f7ed2.firebaseio.com/"
 });
+
+var db = firebase.database();
+var ref = db.ref("/roomKeys");
+ref.once("value", function(snapshot) {
+  console.log(snapshot.val());
+});
+*/
 
 var createPlayList = "";
 
