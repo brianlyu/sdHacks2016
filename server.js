@@ -8,8 +8,12 @@ app.use(express.static('public'));
 app.set("view engine", "ejs");
 
 
-app.get('/', (reg, res) => {
+app.get('/', (req, res) => {
   res.render("pages/home"); // started from the views dir
+});
+
+app.get('/createlist', function(req,res){
+	res.render('pages/createList');
 });
 
 
