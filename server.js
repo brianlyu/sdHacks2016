@@ -17,25 +17,29 @@ app.set("view engine", "ejs");
 
 
 app.get('/', (req, res) => {
-  res.render("pages/home", {"value": ""}); // started from the views dir
+  res.render("pages/home", {buttonValueSearch: true,
+                              buttonValueCreate: true,
+                            }); // started from the views dir
 });
 
 app.post('/createListButton', (req,res) => {
   console.log(req.body);
-  if(req.body.findPlayList === ''){
-    res.redirect('/createList');
-  } else {
+  if(req.body.search && req.body.findPlayList !== ''){
+    res.redirect('/confirmation');
+  } else if(req.body.create && req.body.finPlayList !== ''){
     search = req.body.findPlayList;
-    res.redirect('/findList');
+    res.redirect('/playList');
+  } else {
+    res.redirect('back');
   }
 });
 
-app.get('/createList', (req,res)=> {
-  res.render("pages/createList");
+app.get('/confirmation', (req,res)=> {
+  res.render("pages/confirmation");
 });
 
-app.get('/findList', (req,res)=> {
-  res.render("pages/findList", {search: search});
+app.get('/playList', (req,res)=> {
+  res.render("pages/playList", {search: search});
 });
 
 

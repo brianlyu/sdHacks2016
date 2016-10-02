@@ -1,5 +1,11 @@
 <% include ../partials/firstHeader %>
-
+  <script type="text/javascript">
+    var input = document.querySelector('#front-code').addEventListener("onKeyPress", ()=>{
+      console.log('here')
+      this.value("");
+    });
+  console.log(document.querySelector('#front-code'));
+  </script>
   <title>Sound Juke</title>
 <% include ../partials/lastHeader %>
   <form action="/createListButton" method="POST" class="container">
@@ -7,15 +13,8 @@
     <div>
       <input type="text" id="front-code" name="findPlayList" placeholder="Enter Code or Playlist Here...">
     </div>
-    <button class="hollow button create-button secondary">Search</button>
-    <button class="hollow button create-button secondary">Create</button>
+    <button name="search" value=<%= buttonValueSearch %> class="hollow button create-button secondary">Search</button>
+    <button name="create" value=<%= buttonValueCreate %> class="hollow button create-button secondary">Create</button>
   </form>
-  <script type="text/javascript">
-    var input = document.querySelector('#front-code').addEventListener("onKeyPress", ()=>{
-      this.value("");
-    });
-    console.log(document.querySelector('#front-code'));
 
-
-  </script>
 <% include ../partials/footer %>
