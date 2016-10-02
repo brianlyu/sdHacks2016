@@ -18,7 +18,15 @@ body {
 button {
   position: relative;
   margin: 2%;
-  width:15%;
+  width: 10%;
+  outline: none;
+  color: #D8E2E6;
+}
+
+.create-button2 {
+  position: relative;
+  margin: 2%;
+  width: 30%;
   outline: none;
   color: #D8E2E6;
 }
@@ -46,11 +54,27 @@ button {
 /* createList */
 >>>>>>> 5373ef8a0049ae8c054f55395ceec8abb374e327
 .create {
-  margin: 15% auto;
+  margin: 4% 18%;
   text-align: center;
 }
 
+.squareOut{
+  padding-top: 11%;
+  padding-left: 20%;
+  width: 1200px;
+  height: 800px;
+	border: 10px double white;
+}
+
+.squareIn{
+  padding-top: 6%;
+  width: 700px;
+  height: 500px;
+  border: 10px double white;
+}
+
 .input{
+  padding: 10px;
 	text-align:center;
 	color: #D8E2E6;
 }

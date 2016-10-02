@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<% include ../partials/header %>
-  <div class="container">
-    <h1 class="title"> Music App </h1>
-    <button class="hollow button create-button secondary" href="pages/createList.ejs">Create</button>
-    <input type="text" id="front-code" placeholder="Enter Code Here..">
-  </div>
-=======
 <% include ../partials/firstHeader %>
   <script type="text/javascript">
     var input = document.querySelector('#front-code').addEventListener("onKeyPress", ()=>{
@@ -19,11 +11,9 @@
   <form action="/createListButton" method="POST" class="container">
     <h1 class="text"> Sound Juke  </h1>
     <div>
-      <input type="text" id="front-code" name="findPlayList" placeholder="Enter Code or Playlist Here...">
+      <input type="text" id="front-code" name="roomKey" placeholder="Enter Code or Playlist Here...">
     </div>
-    <button name="search" value=<%= buttonValueSearch %> class="hollow button create-button secondary">Search</button>
-    <button name="create" value=<%= buttonValueCreate %> class="hollow button create-button secondary">Create</button>
+    <button name="enter" value=<%= buttonValueCreate %> class="hollow button create-button secondary">Enter</button>
   </form>
 
->>>>>>> 5373ef8a0049ae8c054f55395ceec8abb374e327
 <% include ../partials/footer %>
