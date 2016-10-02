@@ -7,16 +7,19 @@ body {
 /* front page */
 .container {
   text-align: center;
-  margin: 20% auto;
+  margin: 10% auto;
 }
 
-.title {
+.text {
   color: #D8E2E6;
 }
 
 /* front button css */
 .create-button {
   position: relative;
+  margin: 2%;
+  width:15%;
+  outline: none;
   color: #D8E2E6;
 }
 
@@ -36,8 +39,12 @@ body {
 /* --------------- */
 
 
+<<<<<<< HEAD
 
 /*----------------*/
+=======
+/* createList */
+>>>>>>> 5373ef8a0049ae8c054f55395ceec8abb374e327
 .create {
   margin: 15% auto;
   text-align: center;
