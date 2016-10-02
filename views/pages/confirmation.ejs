@@ -2,14 +2,22 @@
   <title> Confirm </title>
 <% include ../partials/lastHeader %>
 <!-- create a confirmation to the user when clicking the search -->
+	
 	<div class = "create">
-		<h1 class = "input"> Confirmation </h1>
-		<input type="text" class="createIn" placeholder="Your Legendary Playlist..."><br>
-		<h2 class = "input">Change to the confirmation</h2>
-		<input type="text" class="createIn" placeholder="Theme"><br>
-		<input type="submit" class="hollow button create-button secondary" value="Let's Get Started!">
+		<div class = "squareOut">
+			<div class="squareIn">
+				<h1 class = "input"> <u>Playlist Title</u> </h1>
+				<font size="5" color="white"><%= doorCode %></font><br><br>
+				<font size="5" color="white" class="input"><u>ID Code</u>: <%= doorCode%></font><br>
+				<br><br><br>
+				<input type="submit" class="hollow button create-button2 secondary" value="Go back">
+				<input type="submit" class="hollow button create-button2 secondary" value="Let's Start!">
+			</div>
+		</div>
+	
 	</div>
-
+		
+	
 
 
 
