@@ -3,22 +3,13 @@ var app = express();
 
 var bodyParser = require('body-parser');
 
+
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-var MongoClient = require('mongodb').MongoClient
-  , assert = require('assert');
+var firebase = require('firebase');
 
-// Connection URL
-var url = 'mongodb://localhost:27017/myproject';
-
-// Use connect method to connect to the server
-MongoClient.connect(url, function(err, db) {
-  assert.equal(null, err);
-  console.log("Connected successfully to server");
-
-  db.close();
-});
+var createPlayList = "";
 
 /* global variable for passing data through routes */
 var search = "";
@@ -38,10 +29,10 @@ app.get('/', (req, res) => {
 
 app.post('/createListButton', (req,res) => {
   console.log(req.body);
-  if(req.body.search && req.body.findPlayList !== ''){
+  if(req.body.search && req.body.roomKey !== ''){
     res.redirect('/confirmation');
-  } else if(req.body.create && req.body.finPlayList !== ''){
-    search = req.body.findPlayList;
+  } else if(req.body.create && req.body.roomKey !== ''){
+    createPlayList = req.body.roomKey; // this is the value of the door code
     res.redirect('/playList');
   } else {
     res.redirect('back');
@@ -61,6 +52,6 @@ app.get('/playList', (req,res)=> {
 var server = app.listen(3000, ()=>{
   var host = server.address().address
   var port = server.address().port
+  
   console.log("Listening at http://%s:%s", host, port);
-
 });
