@@ -31,6 +31,7 @@ app.post('/createListButton', (req,res) => {
     res.redirect('/playList');
   } else {
     res.redirect('back');
+    
   }
 });
 
