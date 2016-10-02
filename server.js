@@ -22,6 +22,15 @@ app.set("view engine", "ejs");
 
 
 app.get('/', (req, res) => {
+<<<<<<< HEAD
+  res.render("pages/home"); // started from the views dir
+});
+
+app.get('/createlist', function(req,res){
+	res.render('pages/createList');
+});
+
+=======
   res.render("pages/home", {buttonValueSearch: true,
                               buttonValueCreate: true,
                             }); // started from the views dir
@@ -47,6 +56,7 @@ app.get('/confirmation', (req,res)=> {
 app.get('/playList', (req,res)=> {
   res.render("pages/playList", {search: search});
 });
+>>>>>>> 5373ef8a0049ae8c054f55395ceec8abb374e327
 
 
 var server = app.listen(3000, ()=>{
