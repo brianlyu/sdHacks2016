@@ -6,6 +6,20 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
+var MongoClient = require('mongodb').MongoClient
+  , assert = require('assert');
+
+// Connection URL
+var url = 'mongodb://localhost:27017/myproject';
+
+// Use connect method to connect to the server
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+
+  db.close();
+});
+
 /* global variable for passing data through routes */
 var search = "";
 
@@ -54,7 +68,9 @@ app.get('/playList', (req,res)=> {
 >>>>>>> 5373ef8a0049ae8c054f55395ceec8abb374e327
 
 
-app.listen(3000, ()=>{
-  console.log("Listening to Port 3000...");
+var server = app.listen(3000, ()=>{
+  var host = server.address().address
+  var port = server.address().port
+  console.log("Listening at http://%s:%s", host, port);
 
 });
