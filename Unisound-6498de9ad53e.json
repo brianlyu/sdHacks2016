@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "unisound-f7ed2",
+  "private_key_id": "6498de9ad53e55799ea4caa15a0eb8dc99886d3c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC/WUNrGBcHGNIx\nvUz8mnCW7dE/FIdeXuDC1jpNOgsKqBK9sQBWU0911c1jb/4Qgomf7AHjtdAzLP4/\nm91zOU8Bu9c6DJgD7dwERmumx/3Xql136afl+7d4h47Wmuzk0q1AENwAgXjhXcLg\npYpJYtRzFi/qGVEzO4RvSA8R6iec29G0a3B1/c30Qvtsh451rKSHBq/RAJPdpPhZ\njteJcHAhn2mc8P3JkaT69cnncU+nczq6ORtWoCVOuGoZZaKyum84PfRJ8zyvkvok\nNLETtD/OYuRcByhlXUItr+tTbKj9KZRcQ79aPQpfK3N+BGuN1Loqv53HoB/xZmGr\nPwJY1bYBAgMBAAECggEAd1lI2Mp8yntr14RYOZJmuWz6P5shV/ZbwIr4cGTMsEfm\n8JQvPqjV/gxuACDBWjDhgHMnNo2Xn+PnbWtdc9oB8nXkJ5vlUUYSHkSCLtO8+8CS\nbhG6HJOlezMqH6cgLRVO5I/feR1IdWETBSWbnGxdUK89EYnbANaVowdSBv2C2a2X\nu9DmkTahH20t6DQbYSLBl3l7xozrRgdQmwPb7C47/Zx/t/dfAXLEKh5kJuLvqKUH\nFirfUwhXAvuFGSfIZMdslUeYkPibCcSMKdeUe+JF0AXBtxPVPG4NP0f+REx6/zUE\njl6JW+dzBwh1hIOhwbW9xHAk2rY0DsLhFyNu3FGOtQKBgQD7tOua3A9wIeVi/0xt\nao0rpVxCmXORstEUNe9mjWZyTa57wARkKDPFFDPVaRb71q3dC8f0JKn6Q1NYYykD\npBfrr7+te7gSHBa5voeLaUUuBTIzpowSTZ+uAvlRKYKWZUqTXp6SEEC9m1m1cDzm\nKKHInNL0shLlk8T5wEd18CuMXwKBgQDCnMoDd/E4XT7Bfrj6/v9ddkXL0JGs3qnW\n6QhN4cQcgOarNmesuFvEOi+LT1gzcKWabz7V5/How7I5m3O3jz8fZQUwPNEOt6Le\nI66F25db+M1HKJeF8VeZYa+I0gzlySCIKYvNXFFQ+ghJd75AJyHzLODcGD6IT7ix\nCN4431PZnwKBgQDAbf1dY/WtfUx4FcOhNr98aawSAmy3K6TqNZ2zolB6/GZzl0YE\nKDQD7EEAW5pFqEc9Yb9ZKBqHCKeUQCLf9LiQ58i7YYVE2xKIqF/Jtg48c56AnEgj\nyhJUn1NpuDlsrz2HUuQZuLE2A6leq9LzBodA7pvclLMbro/9fAFl6dnxMwKBgQCj\n0NMDhG0aovL2cbNIJGnUxIAQBmr5dxzD+Liyxj4MODzzFgLDExS74raur4VxF3tu\nugHMkUfCRSi68S3A7+WUibaKWkcn+lAwaRy5NJT+KDqzkWmqp/Ky+9WEeDu/GUQ3\nGbHCldklLrLXFOKioc4kIjzNR+MrXt/6tZpJiUPNxQKBgQCgMM5Mbb75gPWC45Sh\n7LUAEvt3KjF5YTuCKzvg6/8kPav55YW1gog1elZkXHNBabzrJY1TuZsBCZC8OdL+\noVb6MvJLXnCAK12Ihgoeztw9trlhNmcG6aGXidblNDF53GnV9TUqXgfiVKVqHTAt\nVZ0vJjVlrwlikimW2MbeN4MT5A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "unisoundeditor@unisound-f7ed2.iam.gserviceaccount.com",
+  "client_id": "103148975232198799719",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/unisoundeditor%40unisound-f7ed2.iam.gserviceaccount.com"
+}

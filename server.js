@@ -9,6 +9,11 @@ app.use(bodyParser.json());
 
 var firebase = require('firebase');
 
+firebase.initializeApp({
+  serviceAccount: "Unisound-6498de9ad53e.json",
+  databaseURL: "https://unisound-f7ed2.firebaseio.com/"
+});
+
 var createPlayList = "";
 
 /* global variable for passing data through routes */
