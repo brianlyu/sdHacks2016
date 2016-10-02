@@ -3,10 +3,30 @@ var app = express();
 
 var bodyParser = require('body-parser');
 
+<<<<<<< HEAD
 var PORT = process.env.PORT || 3000;
+=======
+>>>>>>> 92ec70e6eeb0d4b3437f221f44252a971a6ddca2
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+
+var firebase = require('firebase');
+
+/*
+firebase.initializeApp({
+  serviceAccount: "Unisound-6498de9ad53e.json",
+  databaseURL: "https://unisound-f7ed2.firebaseio.com/"
+});
+
+var db = firebase.database();
+var ref = db.ref("/roomKeys");
+ref.once("value", function(snapshot) {
+  console.log(snapshot.val());
+});
+*/
+
+var createPlayList = "";
 
 /* global variable for passing data through routes */
 var search = "";
@@ -19,6 +39,7 @@ app.set("view engine", "ejs");
 
 
 app.get('/', (req, res) => {
+
   res.render("pages/home", {buttonValueSearch: true,
                               buttonValueCreate: true,
                             }); // started from the views dir
@@ -26,11 +47,18 @@ app.get('/', (req, res) => {
 
 app.post('/createListButton', (req,res) => {
   console.log(req.body);
+<<<<<<< HEAD
   if(req.body.search && req.body.findPlayList !== ''){
     search = req.body.findPlayList; // getting the door code
     res.redirect('/confirmation');
   } else if(req.body.create && req.body.finPlayList !== ''){
     search = req.body.findPlayList; // playList Title
+=======
+  if(req.body.search && req.body.roomKey !== ''){
+    res.redirect('/confirmation');
+  } else if(req.body.create && req.body.roomKey !== ''){
+    createPlayList = req.body.roomKey; // this is the value of the door code
+>>>>>>> 92ec70e6eeb0d4b3437f221f44252a971a6ddca2
     res.redirect('/playList');
   } else {
     res.redirect('back');
@@ -49,7 +77,15 @@ app.get('/playList', (req,res)=> {
 });
 
 
+<<<<<<< HEAD
 app.listen(PORT, process.env.IP, ()=>{
   console.log("Listening to Port 3000...");
 
+=======
+var server = app.listen(3000, ()=>{
+  var host = server.address().address
+  var port = server.address().port
+  
+  console.log("Listening at http://%s:%s", host, port);
+>>>>>>> 92ec70e6eeb0d4b3437f221f44252a971a6ddca2
 });

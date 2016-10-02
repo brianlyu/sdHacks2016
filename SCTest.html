@@ -1,0 +1,74 @@
+<!--<!doctype html>
+	<html>
+		<head>
+			<title>Get the top artists and their playcounts using last.fm API</title>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		</head>
+		<body>
+			<script>
+				$(document).ready(function() {
+    $.getJSON("http://ws.audioscrobbler.com/2.0/?method=track.search&track=Strangers&api_key=YOUR_API_KEY&format=json&callback=?", function(json) {
+        var html = '';
+        $.each(json.topartists.artist, function(i, item) {
+            html += "<p><a href=" + item.url + " target='_blank'>" + item.name + " - " + "Play count : " +item.playcount + "</a></p>";
+        });
+        $('#result').append(html);
+    });
+});
+</script>
+<div id="result"></div>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html >
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    	<script type="text/javascript" src="lastfm.api.md5.js"></script>
+		<script type="text/javascript" src="lastfm.api.js"></script>
+		<script type="text/javascript" src="lastfm.api.cache.js"></script>
+		<script type="text/javascript" src="scriptTest.js"></script>
+    	<title>dank playlist </title>
+
+    	<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body> 
+    	<div id = "header">
+    		<h1><strong>U&nbsp;N&nbsp;I&nbsp;S&nbsp;O&nbsp;U&nbsp;N&nbsp;D</strong></h1>
+    	</div>
+    	<div id = "qList">
+    		QUEUE
+    	</div>
+    	<div id = "currSong"> Your Current Song </div>
+
+    	<div id = "searchSong" > Search for Your Song 
+    		<ul id="songResults"> </ul>
+    	</div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
