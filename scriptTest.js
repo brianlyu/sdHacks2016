@@ -6,10 +6,10 @@ var lastfm = new LastFM({
     cache     : cache
 });
 
-window.document.onload = lastfm.track.search({
+function doThis(){
+	lastfm.track.search({
     limit: 8,
-    track: "Closer",
-    artist: "Chainsmokers"
+    track: document.getElementById('songBar').value,
 },
 {
     success: function(data) {
@@ -24,3 +24,4 @@ window.document.onload = lastfm.track.search({
         alert(data.error + " " + data.message);
     }
 });
+};

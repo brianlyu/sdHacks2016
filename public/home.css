@@ -15,7 +15,7 @@ body {
 }
 
 /* front button css */
-.create-button {
+button {
   position: relative;
   margin: 2%;
   width:15%;
