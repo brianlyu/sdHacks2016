@@ -3,6 +3,8 @@ var app = express();
 
 var bodyParser = require('body-parser');
 
+var PORT = process.env.PORT || 3000;
+
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
@@ -25,9 +27,10 @@ app.get('/', (req, res) => {
 app.post('/createListButton', (req,res) => {
   console.log(req.body);
   if(req.body.search && req.body.findPlayList !== ''){
+    search = req.body.findPlayList; // getting the door code
     res.redirect('/confirmation');
   } else if(req.body.create && req.body.finPlayList !== ''){
-    search = req.body.findPlayList;
+    search = req.body.findPlayList; // playList Title
     res.redirect('/playList');
   } else {
     res.redirect('back');
@@ -36,15 +39,17 @@ app.post('/createListButton', (req,res) => {
 });
 
 app.get('/confirmation', (req,res)=> {
-  res.render("pages/confirmation");
+  console.log(search);
+  res.render("pages/confirmation", {doorCode: search}); // passing in an doorCode variable to confirmation.ejs
 });
 
 app.get('/playList', (req,res)=> {
-  res.render("pages/playList", {search: search});
+  
+  res.render("pages/playList", {title: search}); // passing in title variable to playList.ejs
 });
 
 
-app.listen(3000, ()=>{
+app.listen(PORT, process.env.IP, ()=>{
   console.log("Listening to Port 3000...");
 
 });
